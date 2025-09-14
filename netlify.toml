@@ -1,16 +1,14 @@
 [build]
-publish = "dist"
-command = "npm run build"
+  command = "npm run build"
+  publish = "dist"
 
-[build.environment]
-NODE_VERSION = "20"
+# Deep-linking for each deck
+[[redirects]]
+  from = "/kof/*"
+  to = "/kof/index.html"
+  status = 200
 
 [[redirects]]
-from = "/.well-known/*"
-to = "/.well-known/:splat"
-status = 200
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/red/*"
+  to = "/red/index.html"
+  status = 200

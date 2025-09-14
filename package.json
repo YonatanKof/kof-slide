@@ -8,6 +8,7 @@
     "build:kof": "slidev build slides/kof/slides.md -o dist/kof",
     "build:red": "slidev build slides/red/slides.md -o dist/red",
     "build:all": "npm run build:kof && npm run build:red",
+    "build": "npm run build:all",
     "export": "slidev export"
   },
   "dependencies": {
