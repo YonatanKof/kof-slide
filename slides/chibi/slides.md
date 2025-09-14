@@ -1,9 +1,9 @@
 ---
 theme: seriph
-title: Welcome to Good Boy
+title: Welcome to Chibi
 ---
 
-# Good Boy
+# Chibi rules!
 
 The frontmatter of this slide is also the headmatter
 
@@ -18,5 +18,15 @@ class: text-white
 A page with the layout `center` and a background image
 
 ---
- 
-# Another slide
+
+# Slide 3
+
+A page without frontmatter
+
+---
+src: ./pages/4.md  # This slide only contains a frontmatter
+---
+
+---
+
+# Slide 5

@@ -6,7 +6,7 @@
     "build": "node scripts/build-all.mjs",
     "build:only": "cross-env SLIDE_DECKS=$DECK node scripts/build-all.mjs",
     "build:skip": "cross-env SKIP_DECKS=$SKIP node scripts/build-all.mjs",
-    "dev": "npx slidev slides/$DECK/slides.md"
+    "dev": "node scripts/dev.mjs"
   },
   "dependencies": {
     "@slidev/cli": "^52.1.0",
