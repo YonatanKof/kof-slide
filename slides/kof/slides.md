@@ -160,7 +160,7 @@ doubled.value = 2
 <arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="342" color="#953" width="2" arrowSize="1" />
 
 <!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
+<!-- <<< @/snippets/external.ts#snippet -->
 
 <!-- Footer -->
 
@@ -613,7 +613,7 @@ Add `{monaco}` to the code block to turn it into an editor:
 
 ```ts {monaco}
 import { ref } from 'vue'
-import { emptyArray } from './external'
+
 
 const arr = ref(emptyArray(10))
 ```
