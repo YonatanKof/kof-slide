@@ -72,9 +72,14 @@ const discoverDecks = () => {
 	}));
 };
 
-const run = (cmd, args, cwd) =>
+const run = (cmd, args, cwd, extraEnv = {}) =>
 	new Promise((resolve, reject) => {
-		const child = spawn(cmd, args, { stdio: 'inherit', cwd, shell: process.platform === 'win32' });
+		const child = spawn(cmd, args, {
+			stdio: 'inherit',
+			cwd,
+			shell: process.platform === 'win32',
+			env: { ...process.env, NODE_OPTIONS: process.env.NODE_OPTIONS || '--max_old_space_size=4096', ...extraEnv },
+		});
 		child.on('close', (code) =>
 			code === 0 ? resolve() : reject(new Error(`${cmd} ${args.join(' ')} failed with ${code}`))
 		);
