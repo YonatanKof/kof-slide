@@ -5,7 +5,7 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: Welcome to Kof!
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -28,7 +28,7 @@ seoMeta:
   # ogImage: https://cover.sli.dev
 ---
 
-# Welcome to Slidev
+# Welcome to Kof!
 
 Presentation slides for developers
 

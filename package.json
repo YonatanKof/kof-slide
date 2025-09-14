@@ -3,8 +3,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open",
+    "dev:kof": "slidev slides/kof/slides.md --open",
+    "dev:red": "slidev slides/red/slides.md --open",
+    "build:kof": "slidev build slides/kof/slides.md -o dist/kof",
+    "build:red": "slidev build slides/red/slides.md -o dist/red",
+    "build:all": "npm run build:kof && npm run build:red",
     "export": "slidev export"
   },
   "dependencies": {
