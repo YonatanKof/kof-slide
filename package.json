@@ -3,19 +3,19 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev:kof": "slidev slides/kof/slides.md --open",
-    "dev:red": "slidev slides/red/slides.md --open",
-    "build:kof": "slidev build slides/kof/slides.md --base /kof/ --out ../../dist/kof",
-    "build:red": "slidev build slides/red/slides.md --base /red/ --out ../../dist/red",
-    "build": "npm run build:kof && npm run build:red"
+    "build": "node scripts/build-all.mjs",
+    "build:only": "cross-env SLIDE_DECKS=$DECK node scripts/build-all.mjs",
+    "build:skip": "cross-env SKIP_DECKS=$SKIP node scripts/build-all.mjs",
+    "dev": "node scripts/dev.mjs"
   },
   "dependencies": {
     "@slidev/cli": "^52.1.0",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
     "vue": "^3.5.18"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.55.0"
+    "playwright-chromium": "^1.55.0",
+    "cross-env": "^7.0.3"
   }
 }

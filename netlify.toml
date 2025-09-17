@@ -1,14 +1,17 @@
 [build]
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
 
-# Deep-linking for each deck
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max_old_space_size=4096"
+
 [[redirects]]
-  from = "/kof/*"
-  to = "/kof/index.html"
+  from = "/:deck/*"
+  to = "/:deck/index.html"
   status = 200
 
 [[redirects]]
-  from = "/red/*"
-  to = "/red/index.html"
+  from = "/"
+  to = "/index.html"
   status = 200
